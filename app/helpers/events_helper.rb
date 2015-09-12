@@ -14,7 +14,7 @@ module EventsHelper
 
   def timeslots
     slots = []
-    (@conference.max_timeslots + 1).times do |i|
+    1.upto(@conference.max_timeslots) do |i|
       slots << [format_time_slots(i), i]
     end
     slots
